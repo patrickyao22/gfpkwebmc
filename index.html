@@ -35,31 +35,31 @@
       </svg>
     </a>
     <div class="menu start">
-      <button id="play" class="button">Play</button>
-      <button id="save" class="button">Load Game</button>
-      <button id="setting" class="button">Setting</button>
-      <button id="feature" class="button">Guide</button>
-      <button id="exit" class="button">Exit</button>
+      <button id="play" class="button">开始游戏</button>
+      <button id="save" class="button">加载游戏</button>
+      <button id="setting" class="button">设置</button>
+      <button id="feature" class="button">操作介绍</button>
+      <button id="exit" class="button">退出</button>
       <footer class="footer">© 2022 Yulei Zhu</footer>
     </div>
 
     <div class="features hidden">
       <p>
-        <b> Left-Click: </b> destroy block <br />
-        <b> Right-Click:</b> place block <br />
-        <b> Wheel / Number Key: </b>change block <br />
-        <b> WASD: </b>move <br />
-        <b> Space: </b>jump / fly up<br />
-        <b> Q:</b> toggle normal / dev mode <br />
-        <b> Shift:</b> sneaking / fly down <br />
-        <b> F: </b>full screen <br />
-        <b> E: </b>menu <br />
+        <b> WASD: </b>移动 <br />
+        <b> 左键: </b> 破坏方块 <br />
+        <b> 右键:</b> 放置方块 <br />
+        <b> 滚轮 / 数字键: </b>切换方块类型 <br />
+        <b> Q:</b> 切换作弊模式 <br />
+        <b> 空格: </b>跳 / 向上飞 <br />
+        <b> Shift:</b> 潜行 / 向下飞 <br />
+        <b> F: </b>全屏 <br />
+        <b> E: </b>菜单 <br />
       </p>
-      <button id="back" class="button">Back</button>
+      <button id="back" class="button">返回</button>
     </div>
 
     <div class="settings hidden">
-      <p id="distance">Render Distance: 3</p>
+      <p id="distance">渲染距离: 3</p>
       <input
         type="range"
         id="distance-input"
@@ -69,7 +69,7 @@
         step="1"
       />
 
-      <p id="fov">Field of View: 70</p>
+      <p id="fov">视野: 70</p>
       <input
         type="range"
         id="fov-input"
@@ -79,15 +79,15 @@
         step="1"
       />
 
-      <p id="music">Music: On</p>
+      <p id="music">音乐: 开</p>
       <input type="range" id="music-input" min="0" max="1" value="1" step="1" />
 
       <br />
       <br />
-      <button id="setting-back" class="button">Apply</button>
+      <button id="setting-back" class="button">保存</button>
     </div>
 
-    <div class="save-modal hidden">Game Saved!</div>
-    <div class="load-modal hidden">Game Loaded!</div>
+    <div class="save-modal hidden">游戏保存完毕!</div>
+    <div class="load-modal hidden">游戏加载完毕!</div>
   </body>
 </html>

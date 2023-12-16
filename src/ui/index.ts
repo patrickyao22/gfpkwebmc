@@ -20,7 +20,7 @@ export default class UI {
 
     // play
     this.play?.addEventListener('click', () => {
-      if (this.play?.innerHTML === 'Play') {
+      if (this.play?.innerHTML === '开始游戏') {
         this.onPlay()
 
         // reset game
@@ -40,7 +40,7 @@ export default class UI {
 
     // save load
     this.save?.addEventListener('click', () => {
-      if (this.save?.innerHTML === 'Save and Exit') {
+      if (this.save?.innerHTML === '保存并退出') {
         // save game
         window.localStorage.setItem(
           'block',
@@ -111,14 +111,14 @@ export default class UI {
     // render distance
     this.distanceInput?.addEventListener('input', (e: Event) => {
       if (this.distance && e.target instanceof HTMLInputElement) {
-        this.distance.innerHTML = `Render Distance: ${e.target.value}`
+        this.distance.innerHTML = `渲染距离: ${e.target.value}`
       }
     })
 
     // fov
     this.fovInput?.addEventListener('input', (e: Event) => {
       if (this.fov && e.target instanceof HTMLInputElement) {
-        this.fov.innerHTML = `Field of View: ${e.target.value}`
+        this.fov.innerHTML = `视野: ${e.target.value}`
         control.camera.fov = parseInt(e.target.value)
         control.camera.updateProjectionMatrix()
       }
@@ -129,7 +129,7 @@ export default class UI {
       if (this.fov && e.target instanceof HTMLInputElement) {
         const disabled = e.target.value === '0'
         control.audio.disabled = disabled
-        this.music!.innerHTML = `Music: ${disabled ? 'Off' : 'On'}`
+        this.music!.innerHTML = `音乐: ${disabled ? '关' : '开'}`
       }
     })
 
@@ -233,7 +233,7 @@ export default class UI {
     isMobile && this.joystick.init()
     this.menu?.classList.add('hidden')
     this.menu?.classList.remove('start')
-    this.play && (this.play.innerHTML = 'Resume')
+    this.play && (this.play.innerHTML = '继续游戏')
     this.crossHair.classList.remove('hidden')
     this.github && this.github.classList.add('hidden')
     this.feature?.classList.add('hidden')
@@ -242,14 +242,14 @@ export default class UI {
   onPause = () => {
     this.menu?.classList.remove('hidden')
     this.crossHair.classList.add('hidden')
-    this.save && (this.save.innerHTML = 'Save and Exit')
+    this.save && (this.save.innerHTML = '保存并退出')
     this.github && this.github.classList.remove('hidden')
   }
 
   onExit = () => {
     this.menu?.classList.add('start')
-    this.play && (this.play.innerHTML = 'Play')
-    this.save && (this.save.innerHTML = 'Load Game')
+    this.play && (this.play.innerHTML = '开始游戏')
+    this.save && (this.save.innerHTML = '加载游戏')
     this.feature?.classList.remove('hidden')
   }
 
